@@ -42,6 +42,6 @@
   become_user: root
   file:
     src: '{{ terraform_binary_dir }}/terraform'
-    dest: '{{ terraform_install_dir }}/terraform'
+    dest: '{{ terraform_install_dir }}/{{ terraform_install_name }}'
     state: link
     force: '{{ terraform_force_install }}'
